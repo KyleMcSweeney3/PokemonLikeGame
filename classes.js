@@ -162,6 +162,14 @@ class Monster extends Sprite {
                     y: this.position.y
                 })
             break;
+            case 'Tail Whip':
+                gsap.to(recipient.position, {
+                    x: recipient.position.x - 20,
+                    yoyo: true,
+                    repeat: 3,
+                    duration: 0.20
+                })
+                break;
         }
     }
 
@@ -173,7 +181,7 @@ class Monster extends Sprite {
         gsap.to(this, {
             opacity: 0
         })
-        audio.battle.stop()
+        audio.battle2.stop()
         audio.victory.play()
     }
 }

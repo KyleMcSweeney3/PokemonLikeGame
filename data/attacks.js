@@ -10,5 +10,11 @@ const attacks = {
         damage: 25,
         type: 'Fire',
         color: 'orange'
+    },
+    TailWhip: {
+        name: 'Tail Whip',
+        damage: 0,
+        type: 'Normal',
+        color: 'black'
     }
 }

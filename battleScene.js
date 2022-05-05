@@ -115,7 +115,6 @@ function animateBattle() {
     })
 }
 
-animate()
 
 document.querySelector('#dialog-box').addEventListener('click', (e) => {
     if(queue.length > 0) {

@@ -138,7 +138,7 @@ function rectangularCollission({r1, r2}) {
     return (
         r1.position.x + r1.width-10 >= r2.position.x &&
         r1.position.x <= r2.width + r2.position.x &&
-        r1.position.y <= r2.height - 30 + r2.position.y &&
+        r1.position.y <= r2.height - 50 + r2.position.y &&
         r1.position.y + r1.height >= r2.position.y
     )
 }
@@ -185,7 +185,7 @@ function animate() {
                             opacity: 1,
                             duration: 0.4,
                             onComplete() {
-                                audio.battle.play()
+                                audio.battle2.play()
                                 initBattle();
                                 animateBattle();
                                 gsap.to('#overlapping-div', {
@@ -301,10 +301,8 @@ window.addEventListener('keyup', (e) => {
     }
 })
 
-let clicked = false;
-window.addEventListener('click', () => {
-    if(!clicked) {
-        audio.Map.play()
-        clicked = true;
-    }
+document.querySelector('#play-game').addEventListener('click', (e) => {
+    document.querySelector('#start-game').style.display = 'none';
+    audio.Map.play()
+    animate()
 })
