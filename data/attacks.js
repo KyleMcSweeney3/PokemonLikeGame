@@ -16,5 +16,11 @@ const attacks = {
         damage: 0,
         type: 'Normal',
         color: 'black'
+    },
+    Splash: {
+        name: 'Splash',
+        damage: 0,
+        type: 'Water',
+        color: 'blue',
     }
 }

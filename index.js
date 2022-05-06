@@ -39,9 +39,6 @@ battleZonesMap.forEach((row, i) => {
     })
 })
 
-console.log(battleZones)
-
-
 // Initialise tileset image and player starting position
 const image = new Image();
 image.src = './images/PokemonStyleGameMap400.png';
@@ -170,7 +167,6 @@ function animate() {
             const battleZone = battleZones[i]
             const overlappingArea = (Math.min(player.position.x + player.width, battleZone.position.x + battleZone.width) - Math.max(player.position.x, battleZone.position.x)) * (Math.min(player.position.y + player.height, battleZone.position.y + battleZone.height) - Math.max(player.position.y, battleZone.position.y));
             if(rectangularCollission({r1: player, r2: {...battleZone, position: {x: battleZone.position.x, y: battleZone.position.y + 3}}}) && overlappingArea > (player.width * player.height) / 2 && Math.random() < 0.02) {
-                console.log('battling'); 
                 window.cancelAnimationFrame(animationId)
                 battle.initiated = true;
                 audio.Map.stop()

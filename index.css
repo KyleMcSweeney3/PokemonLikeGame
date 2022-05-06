@@ -18,6 +18,10 @@ button {
     
 }
 
+img {
+    width: 100px;
+}
+
 button:hover {
     background-color: #ddd;
     cursor: pointer;
@@ -27,6 +31,12 @@ button:hover {
     display: flex; 
     align-items: center; 
     justify-content: center;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.controls {
+    color: white;
     margin-top: 50px;
 }
 
